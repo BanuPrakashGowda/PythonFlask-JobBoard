@@ -29,7 +29,7 @@ def execute_sql(sql, values=(), comit=False, single=False):
 @app.teardown_appcontext
 def close_connection():
     connection = getattr(g, '_connection', None)
-    if connection is not None
+    if connection is not None:
         connection.close()
 
 
